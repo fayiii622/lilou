@@ -83,15 +83,16 @@ def search_recipe(): #works but have issues, plz fix - fixing
 def view_all(): 
     print(">>> View All Recipes function called")# write the function here
 
+  def recipes_table():
     with open("recipes.csv","r") as file:
         reader = csv.reader(file)
         head = next(reader)
        
   
-        print(f"{head[0]:20} {head[1]:40}{head[2]:15}")
+        print(f"{head[0]:40} {head[2]:15}")
         print(".."*50)
         for row in reader:
-            print(f"{row[0]:20}{row[1]:40}{row[2]:20}")
+            print(f"{row[0]:40}{row[2]:20}")
 
 #-----------------------------------------------------------------------------------------
 def random_recipe(filename="recipes.csv"):# make sure its run
